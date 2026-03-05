@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>موسوعة الخوارزميات | فادي مرزق</title>
+    <style>
+        :root { --main: #00d2ff; --accent: #ffd700; --bg: #0b0f19; --card: #161e2d; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg); color: #f1f5f9; margin: 0; line-height: 1.8; }
+        .school-tag { background: #000; color: var(--accent); text-align: center; padding: 10px; font-weight: bold; border-bottom: 2px solid var(--accent); }
+        header { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=1000'); background-size: cover; padding: 80px 20px; text-align: center; border-bottom: 4px solid var(--main); }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .chapter { background: var(--card); padding: 40px; border-radius: 25px; margin-bottom: 30px; border: 1px solid #2d3748; box-shadow: 0 15px 40px rgba(0,0,0,0.4); display: none; animation: fadeIn 0.8s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        h2 { color: var(--main); border-right: 5px solid var(--main); padding-right: 15px; margin-top: 0; }
+        .btn { background: var(--main); color: #000; padding: 15px 40px; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.3s; font-size: 1.1rem; }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--main); }
+        #quiz-page { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg); z-index: 1000; overflow-y: auto; padding: 20px; }
+        .q-card { background: var(--card); padding: 25px; border-radius: 15px; margin-bottom: 20px; border-right: 5px solid var(--main); }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; justify-content: center; align-items: center; }
+        .result-box { background: var(--card); padding: 50px; border-radius: 30px; text-align: center; border: 2px solid var(--main); max-width: 500px; }
+        footer { background: #000; padding: 40px; text-align: center; border-top: 1px solid var(--main); margin-top: 50px; }
+        .highlight { color: var(--main); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="school-tag">مدرسة زاوية السلطان الثانوية المشتركة - إدارة المنيا التعليمية</div>
+
+<header>
+    <h1>تاريخ وعالم الخوارزميات</h1>
+    <p style="font-size: 1.3rem; color: #94a3b8;">المحرك الخفي للحضارة الحديثة</p>
+    <p>إعداد الطالب: <span class="highlight">فادي مرزق صادق</span> | بإشراف: <span class="highlight">المس سحر</span></p>
+</header>
+
+<div class="container">
+    <div class="chapter" id="c1" style="display: block;">
+        <h2>💡 مفهوم الخوارزمية: من المطبخ إلى الفضاء</h2>
+        <p>الخوارزمية في أصلها ليست شفرة معقدة أو طلسماً رياضياً، بل هي ببساطة <b>"منطق الخطوات"</b>. هي عبارة عن تتابع محدد من التعليمات المنطقية التي تهدف لحل مشكلة معينة أو الوصول لنتيجة محددة. إذا قمت باتباع خطوات محددة لترتيب غرفتك أو تحضير وجبة، فأنت فعلياً تنفذ خوارزمية. في عالم الحاسوب، الخوارزمية هي الروح التي تحرك الجسد (الأجهزة)، وبدونها تظل أقوى المعالجات مجرد قطع سيليكون صامتة لا تدري ماذا تفعل.</p>
+        <button class="btn" onclick="next(2)">الفصل التالي: العبقري الخوارزمي ⮕</button>
+    </div>
+
+    <div class="chapter" id="c2">
+        <h2>🕌 الخوارزمي: العبقري الذي منح العالم اسمه</h2>
+        <p>يعود الفضل في صياغة هذا المفهوم وتسميته إلى العالم المسلم <span class="highlight">محمد بن موسى الخوارزمي</span>، الذي عاش في القرن التاسع الميلادي وعمل في "بيت الحكمة" ببغداد. لم يكن الخوارزمي مجرد عالم رياضيات، بل كان مهندس المنطق الذي وضع القواعد الأساسية لعلم الجبر. كلمة "خوارزمية" هي تحريف لاتيني لاسم "الخوارزمي". عندما تُرجمت كتبه إلى اللاتينية في العصور الوسطى، أُطلق على الطرق الحسابية التي قدمها اسم "Algoritmi". قدم الخوارزمي للعالم نظام الأرقام العربية، والصفر، والأهم من ذلك: قدم "المنهجية الجبرية" التي تعتمد على خطوات متسلسلة لحل المعادلات، وهي النواة الأولى لما نسميه اليوم "البرمجة".</p>
+        <button class="btn" onclick="next(3)">الفصل التالي: كيف تطورت الفكرة؟ ⮕</button>
+    </div>
+
+    <div class="chapter" id="c3">
+        <h2>⏳ كيف ولدت الفكرة وتطورت عبر العصور؟</h2>
+        <p>بدأت الخوارزميات كطرق يدوية لحل المسائل الحسابية وقياس الأراضي وتقدير المواريث. ومع مرور القرون، انتقلت من الورق إلى الآلات. في القرن التاسع عشر، كتبت <span class="highlight">"آدا لوفليس"</span> أول خوارزمية معقدة مخصصة لآلة حاسبة ميكانيكية (محرك التحليل لشارل بابيج)، لتصبح آدا أول مبرمجة في التاريخ. ومع ظهور الحواسيب الإلكترونية في منتصف القرن العشرين، تحولت الخوارزميات من عمليات حسابية بسيطة إلى لغات برمجية كاملة قادرة على محاكاة المنطق البشري، ومعالجة ملايين البيانات في أجزاء من الثانية، وصولاً إلى عصر "التعلم الآلي" حيث أصبحت الخوارزميات قادرة على تطوير نفسها بنفسها.</p>
+        <button class="btn" onclick="next(4)">الفصل التالي: أهمية الاختراع ⮕</button>
+    </div>
+
+    <div class="chapter" id="c4">
+        <h2>🚀 لماذا الخوارزميات هي أهم اختراع في العصر الحديث؟</h2>
+        <p>تكمن أهمية الخوارزميات في قدرتها الفائقة على التنظيم واتخاذ القرار بسرعة ودقة تفوق البشر. هي التي تدير محركات البحث مثل جوجل لفرز مليارات الصفحات وتزويدك بالمعلومة في لحظة. هي التي توجه الصواريخ، وتنظم رحلات الطيران، وتتنبأ بحالة الطقس، وتحمي حساباتك البنكية عبر التشفير. بدون الخوارزميات، يتوقف الإنترنت، وتنهار الأنظمة المالية، وتفشل التكنولوجيا الطبية الحديثة في تشخيص الأمراض.</p>
+        <button class="btn" onclick="next(5)">الفصل التالي: كيف تعمل خلف الستار؟ ⮕</button>
+    </div>
+
+    <div class="chapter" id="c5">
+        <h2>⚙️ كيف تعمل الخوارزمية خلف الستار؟</h2>
+        <p>تعمل الخوارزمية وفق دورة حياة منطقية تبدأ بـ <b>"المدخلات"</b>، وهي البيانات التي يستقبلها النظام. ثم تأتي مرحلة <b>"المعالجة"</b>، حيث يتم تطبيق القواعد المنطقية والعمليات الحسابية (مثل المقارنة، الترتيب، أو التكرار). وأخيراً تأتي <b>"المخرجات"</b>، وهي النتيجة النهائية التي يراها المستخدم. تمتاز الخوارزمية الناجحة بثلاث صفات: <b>الوضوح</b> (خطوات لا تقبل التأويل)، <b>المحدودية</b> (يجب أن تنتهي عند نقطة ما)، و<b>الفعالية</b> (حل المشكلة بأقل مجهود ووقت ممكن).</p>
+        <button class="btn" onclick="next(6)">الفصل الأخير: الواقع الافتراضي ⮕</button>
+    </div>
+
+    <div class="chapter" id="c6">
+        <h2>🤖 الخوارزميات في حياتنا اليومية: الواقع الافتراضي والذكاء الاصطناعي</h2>
+        <p>اليوم، نعيش في عصر "هيمنة الخوارزميات". عندما تشاهد فيديو مقترحاً لك على يوتيوب، أو تستخدم تطبيقات الواقع الافتراضي، أو تطلب سيارة عبر تطبيق، فأنت تتفاعل مع خوارزميات معقدة تدرس سلوكك وتتوقع رغباتك. لقد انتقلت الخوارزمية من مجرد أداة للحساب إلى كيان ذكي قادر على التعرف على الوجوه، وترجمة اللغات فورياً، وقيادة السيارات ذاتية القيادة، مما يجعلها المحرك الأساسي لمستقبل البشرية.</p>
+        <button class="btn" style="background: var(--accent);" onclick="startQuiz()">انتهى الشرح.. ابدأ الاختبار النهائي ⮕</button>
+    </div>
+</div>
+
+<div id="quiz-page">
+    <div class="container">
+        <h1 style="color: var(--main);">اختبار الـ 30 سؤالاً</h1>
+        <div id="quiz-container"></div>
+        <button class="btn" onclick="showResult()" style="width:100%; margin:40px 0; background:#39ff14;">إنهاء وتصحيح الاختبار</button>
+    </div>
+</div>
+
+<div class="modal" id="modal">
+    <div class="result-box">
+        <h2 id="res-title">النتيجة</h2>
+        <div style="font-size: 4rem; font-weight: bold; color: var(--main);" id="res-score">0 / 30</div>
+        <p id="res-msg"></p>
+        <button class="btn" onclick="location.reload()">العودة للبداية</button>
+    </div>
+</div>
+
+<footer>
+    <p>تم التصميم بواسطة فادي مرزق صادق | مدرسة زاوية السلطان</p>
+    <p>بإشراف المس الفاضلة: سحر</p>
+</footer>
+
+<script>
+    const bank = [
+        {q: "من هو واضع أسس الخوارزميات؟", a: ["ابن الهيثم", "محمد بن موسى الخوارزمي", "ابن سينا"], c: 1},
+        {q: "أي شكل يستخدم للبداية والنهاية؟", a: ["المستطيل", "البيضاوي", "المعين"], c: 1},
+        {q: "الخوارزمية في أصلها تعني:", a: ["كود معقد", "منطق الخطوات", "قطع سيليكون"], c: 1},
+        {q: "من هي أول مبرمجة في التاريخ؟", a: ["ماري كوري", "آدا لوفليس", "سحر"], c: 1},
+        {q: "يستخدم المعين لاتخاذ:", a: ["القرار", "المعالجة", "الإخراج"], c: 0},
+        {q: "البيانات التي يستقبلها النظام تسمى:", a: ["مخرجات", "مدخلات", "تشفير"], c: 1},
+        {q: "المرحلة التي تلي المدخلات هي:", a: ["المخرجات", "المعالجة", "التكويد"], c: 1},
+        {q: "أي شكل يستخدم للعمليات الحسابية؟", a: ["المستطيل", "المعين", "البيضاوي"], c: 0},
+        {q: "الخوارزمية الناجحة يجب أن تكون:", a: ["لا نهائية", "محدودة وواضحة", "معقدة جداً"], c: 1},
+        {q: "يستخدم متوازي الأضلاع لـ:", a: ["الإدخال والإخراج", "القرار", "البداية"], c: 0}
+    ];
+    let fullQuiz = [];
+    for(let i=0; i<30; i++) fullQuiz.push({...bank[i%bank.length], id: i});
+
+    function next(n) {
+        document.getElementById('c'+(n-1)).style.display = 'none';
+        document.getElementById('c'+n).style.display = 'block';
+        window.scrollTo(0,0);
+    }
+
+    function startQuiz() {
+        document.getElementById('quiz-page').style.display = 'block';
+        const box = document.getElementById('quiz-container');
+        fullQuiz.forEach((q, i) => {
+            box.innerHTML += `
+                <div class="q-card">
+                    <p><b>س ${i+1}: ${q.q}</b></p>
+                    ${q.a.map((opt, idx) => `<label style="display:block;"><input type="radio" name="q${i}" value="${idx}"> ${opt}</label>`).join('')}
+                </div>
+            `;
+        });
+    }
+
+    function showResult() {
+        let s = 0;
+        fullQuiz.forEach((q, i) => {
+            const sel = document.querySelector(`input[name="q${i}"]:checked`);
+            if(sel && parseInt(sel.value) === q.c) s++;
+        });
+        document.getElementById('modal').style.display = 'flex';
+        document.getElementById('res-score').textContent = s + " / 30";
+        document.getElementById('res-msg').textContent = s >= 15 ? "ممتاز يا دبابه عمل بطولي." : "راجع الشرح مرة أخرى يا بطل.";
+    }
+</script>
+</body>
+</html>
